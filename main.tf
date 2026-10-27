@@ -1,3 +1,4 @@
+
 terraform {
   required_providers {
     docker = {
@@ -24,4 +25,11 @@ resource "docker_container" "nginx" {
     internal = 80
     external = 8080
   }
+
+  volumes {
+    host_path      = abspath("${path.module}/website")
+    container_path = "/usr/share/nginx/html"
+    read_only      = true
+  }
 }
+

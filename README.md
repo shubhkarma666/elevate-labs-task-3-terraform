@@ -91,6 +91,7 @@ resource "docker_image" "nginx" {
   keep_locally = true
 }
 ```
+
 Explanation:
 
 docker_image tells Terraform to manage a Docker image.
@@ -100,6 +101,7 @@ nginx is the Terraform resource's local name.
 nginx:alpine identifies the Nginx image with the Alpine Linux base.
 
 keep_locally = true requests that the image be retained locally when Terraform removes the image resource, where supported by the provider.
+
 
 c. Docker Container Resource
 
@@ -123,25 +125,18 @@ resource "docker_container" "nginx" {
 
 Explanation:
 
-docker_container defines the container Terraform will create.
-
-name sets the Docker container name to terraform-nginx-task3.
-
-image references the image resource declared above. Terraform understands this dependency and creates the image before the container.
-
-internal = 80 specifies the port used by Nginx inside the container.
-
-external = 8080 exposes Nginx through port 8080 on the local computer.
-
-host_path points to the local website folder.
-
-container_path mounts that folder at Nginx's default HTML directory.
-
-read_only = true prevents the container from modifying the mounted website files.
+- docker_container defines the container Terraform will create.
+- name sets the Docker container name to terraform-nginx-task3.
+- image references the image resource declared above. Terraform understands this dependency and creates the image before the container.
+- internal = 80 specifies the port used by Nginx inside the container.
+- external = 8080 exposes Nginx through port 8080 on the local computer.
+- host_path points to the local website folder.
+- container_path mounts that folder at Nginx's default HTML directory.
+- read_only = true prevents the container from modifying the mounted website files.
 
 The volume mount allows the custom website/index.html file to replace the default Nginx page without building a custom Docker image.
 
-Custom Nginx Webpage
+d. Custom Nginx Webpage
 
 The website/index.html file contains the custom webpage displayed by the Nginx container.
 
@@ -151,7 +146,9 @@ Because the website directory is mounted into the container, Nginx serves the lo
 
 After deployment, the webpage can be accessed at:
 
+```text
 http://localhost:8080
+```
 
 Initialize the Terraform project:
 

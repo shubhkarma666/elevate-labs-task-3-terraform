@@ -17,16 +17,16 @@ This project demonstrates Infrastructure as Code (IaC) using Terraform and Docke
 ## Screenshots
 
 ### 1. Terraform Plan
-![Terraform Plan](screenshots/terraform-plan.png)
+![Terraform Plan](screenshots/terraform-plan-ss.png)
 
 ### 2. Terraform Apply
-![Terraform Apply](screenshots/terraform-apply.png)
+![Terraform Apply](screenshots/terraform-apply-ss.png)
 
 ### 3. Custom Nginx Website
 ![Custom Nginx Website](screenshots/homepage-ss.png)
 
 ### 4. Terraform State & Docker list
-![Terraform State](screenshots/dockerps-statelist.png)
+![Terraform State](screenshots/dockerps-statelist-ss.png)
 
 ### 5. Terraform Destroy
 ![Terraform Destroy](screenshots/terraform-destroy.png)

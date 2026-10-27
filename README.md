@@ -13,6 +13,25 @@ This project demonstrates Infrastructure as Code (IaC) using Terraform and Docke
 - Git and GitHub
 - Windows 11 and Git Bash
 
+
+## Screenshots
+
+### 1. Terraform Plan
+![Terraform Plan](screenshots/terraform-plan.png)
+
+### 2. Terraform Apply
+![Terraform Apply](screenshots/terraform-apply.png)
+
+### 3. Custom Nginx Website
+![Custom Nginx Website](screenshots/homepage-ss.png)
+
+### 4. Terraform State & Docker list
+![Terraform State](screenshots/dockerps-statelist.png)
+
+### 5. Terraform Destroy
+![Terraform Destroy](screenshots/terraform-destroy.png)
+
+
 ## Project Structure
 
 ```text

@@ -49,7 +49,7 @@ The Terraform configuration in `main.tf` defines the Docker provider, downloads 
 Port `8080` on the local computer is mapped to port `80` inside the container.
 
 
-### Terraform Configuration Explained
+## Terraform Configuration Explained
 
 The main.tf file defines the infrastructure Terraform manages.
 

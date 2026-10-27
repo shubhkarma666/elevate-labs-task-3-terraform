@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This project demonstrates Infrastructure as Code (IaC) using Terraform and Docker. Terraform is used to provision an Nginx Docker container, verify the deployed resources, inspect Terraform state, and destroy the infrastructure when it is no longer needed.
+I used Terraform to create an Nginx container, tested the website locally, checked Terraform state, and removed the resources when finished. Terraform is used to provision an Nginx Docker container, verify the deployed resources, inspect Terraform state, and destroy the infrastructure when it is no longer needed.
 
 ## Tools Used
 
@@ -48,9 +48,8 @@ The Terraform configuration in `main.tf` defines the Docker provider, downloads 
 
 Port `8080` on the local computer is mapped to port `80` inside the container.
 
-## Execution Steps
 
-Terraform Configuration Explained
+### Terraform Configuration Explained
 
 The main.tf file defines the infrastructure Terraform manages.
 
@@ -195,17 +194,6 @@ Confirm the destruction by checking Docker:
 ```bash
 docker ps -a
 ```
-
-## Screenshots and Execution Evidence
-
-Execution screenshots are included in the `screenshots/` folder to demonstrate the Terraform workflow.
-
-- Terraform initialization
-- Terraform plan
-- Successful Terraform apply
-- Terraform state inspection
-- Running Nginx container
-- Successful Terraform destroy
 
 ## Key Learnings
 
